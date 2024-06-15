@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
       locale: localeController.language,
       textDirection: TextDirection.ltr,
       debugShowCheckedModeBanner: false,
-      // themeMode: _themeAppMode.mode.value ? ThemeMode.dark : ThemeMode.light,
       theme: getDarkThemeData(),
       darkTheme: getDarkThemeData(),
       initialBinding: MyBinding(),
