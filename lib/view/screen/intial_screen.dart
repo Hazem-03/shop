@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shop/core/constant/routes.dart';
 import '../screen/Home/home.dart';
 
 class InitialScreen extends StatelessWidget {
@@ -67,7 +68,9 @@ class ButtonLayer extends StatelessWidget {
             context: context,
             backGroundColor: Theme.of(context).colorScheme.primary,
             borderSideColor: Theme.of(context).colorScheme.primary,
-            onTap: () {},
+            onTap: () {
+              Get.toNamed(AppRoute.login);
+            },
             text: "Login or Register",
           ),
           const SizedBox(height: 15),

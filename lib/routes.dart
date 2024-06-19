@@ -1,7 +1,10 @@
+import 'package:shop/core/middleware/my_middleware.dart';
 import 'package:shop/view/screen/Home/search_screen.dart';
 import 'package:shop/view/screen/drawer/about_us.dart';
 import 'package:shop/view/screen/drawer/favorite.dart';
 import 'package:shop/view/screen/drawer/privacy.dart';
+import 'package:shop/view/screen/intial_screen.dart';
+import 'package:shop/view/screen/language.dart';
 import 'package:shop/view/screen/order/cart_screen.dart';
 import 'package:shop/view/screen/order/error_screen.dart';
 
@@ -29,12 +32,20 @@ import 'package:get/get.dart';
 import 'core/constant/routes.dart';
 
 List<GetPage> routes = [
-  // GetPage(name: "/", page: () => const Language(),middlewares: [
-  //   MyMiddleware()
-  // ]),
-  GetPage(name: "/", page: () => const Home()),
-  GetPage(name: AppRoute.login, page: () => const Login()),
-  GetPage(name: AppRoute.signUp, page: () => const SignUp()),
+  GetPage(
+    name: "/",
+    page: () => const Language(),
+    transition: Transition.fadeIn,
+    //middlewares: [MyMiddleware()]
+  ),
+  GetPage(
+      name: AppRoute.login,
+      page: () => const Login(),
+      transition: Transition.fadeIn),
+  GetPage(
+      name: AppRoute.signUp,
+      page: () => const SignUp(),
+      transition: Transition.fadeIn),
   GetPage(
       name: AppRoute.forgetPassword,
       page: () => const ForgetPassword(),

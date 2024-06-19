@@ -10,16 +10,17 @@ class CustomTextFormAuth extends StatelessWidget {
   final void Function()? onTap;
   final bool? obscureText;
 
-  const CustomTextFormAuth(
-      {super.key,
-      required this.hintText,
-      required this.labelText,
-      required this.iconData,
-      required this.myController,
-      this.validator,
-      this.keyboardType,
-      this.onTap,
-      this.obscureText,});
+  const CustomTextFormAuth({
+    super.key,
+    required this.hintText,
+    required this.labelText,
+    required this.iconData,
+    required this.myController,
+    this.validator,
+    this.keyboardType,
+    this.onTap,
+    this.obscureText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +40,7 @@ class CustomTextFormAuth extends StatelessWidget {
             label: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 9),
                 child: Text(labelText)),
-            suffixIcon: InkWell(
-              splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: onTap,child: Icon(iconData)),
+            suffixIcon: GestureDetector(onTap: onTap, child: Icon(iconData)),
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
       ),
